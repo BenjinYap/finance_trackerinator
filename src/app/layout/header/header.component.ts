@@ -1,13 +1,13 @@
 import {Component} from '@angular/core';
-import {MatToolbar} from "@angular/material/toolbar";
 import {RouterLink} from "@angular/router";
+import {ButtonModule} from "primeng/button";
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    MatToolbar,
-    RouterLink
+    RouterLink,
+    ButtonModule
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
@@ -15,3 +15,5 @@ import {RouterLink} from "@angular/router";
 export class HeaderComponent {
 
 }
+
+
