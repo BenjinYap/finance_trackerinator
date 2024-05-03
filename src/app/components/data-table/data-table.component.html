@@ -1,0 +1,24 @@
+<p-table
+  [value]="data ? data : []"
+  [columns]="columns"
+  [loading]="!data"
+  [showLoader]="false"
+>
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th *ngFor="let col of columns">
+        {{ col.header }}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-row>
+    <tr>
+      <td *ngFor="let col of columns">
+        {{ row[col.field] }}
+      </td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="loadingbody">
+    <h1>Loading</h1>
+  </ng-template>
+</p-table>
