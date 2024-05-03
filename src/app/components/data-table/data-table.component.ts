@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
-import {TableModule} from "primeng/table";
 import {NgForOf} from "@angular/common";
 import {ExpenseModel} from "../../models/expense/expense.model";
+import {TableComponent} from "../../bjui/table/table.component";
 
 type Column = {
   header: string,
@@ -12,8 +12,8 @@ type Column = {
   selector: 'app-data-table',
   standalone: true,
   imports: [
-    TableModule,
     NgForOf,
+    TableComponent,
   ],
   templateUrl: './data-table.component.html',
   styleUrl: './data-table.component.scss'

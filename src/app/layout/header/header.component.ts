@@ -1,19 +1,27 @@
 import {Component} from '@angular/core';
 import {RouterLink} from "@angular/router";
-import {ButtonModule} from "primeng/button";
+import {NgForOf} from "@angular/common";
+
+type Link = {
+  url: string,
+  text: string,
+};
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
     RouterLink,
-    ButtonModule
+    NgForOf
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+  public links: Link[] = [
+    {url: '/', text: 'Home'},
+    {url: '/about', text: 'About'},
+  ];
 }
 
 

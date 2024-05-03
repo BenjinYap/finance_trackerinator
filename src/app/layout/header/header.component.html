@@ -1,9 +1,10 @@
-<header>
+<header class="flex items-center px-4 py-2 border-b border-neutral-600 bg-neutral-950">
 
-  <h1>Finance Trackerinator</h1>
+  <h1 class="text-amber-300 text-2xl pr-4">Finance Trackerinator</h1>
   <nav>
-
-    <p-button label="Home" text="true" routerLink="/"></p-button>
-    <p-button label="About" text="true" routerLink="/about"></p-button>
+    <a
+      *ngFor="let link of links"
+      class="text-neutral-200 hover:text-amber-500 text-lg px-2 cursor-pointer"
+      routerLink="{{link.url}}">{{ link.text }}</a>
   </nav>
 </header>
