@@ -1,0 +1,9 @@
+<form [formGroup]="form" class="grid grid-cols-4 gap-4">
+  <bj-textfield [id]="'dwadwa'" label="Date" formControlName="item"></bj-textfield>
+  <bj-textfield [id]="'dwadwa'" label="Category" formControlName="item"></bj-textfield>
+  <bj-textfield [id]="'dwadwa'" label="Item" formControlName="item"></bj-textfield>
+  <bj-textfield [id]="'dwadwa'" label="Amount" formControlName="item"></bj-textfield>
+</form>
+
+{{ form.get('item')?.value }}
+<button (click)="bla()">awdawd</button>
