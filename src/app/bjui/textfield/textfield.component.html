@@ -3,6 +3,7 @@
   <input
     class="bg-transparent outline-none py-1 border-b border-neutral-600 hover:border-neutral-200 focus:border-amber-300"
     id="{{id}}"
+    [type]="type"
     [value]="value"
     (input)="handleChange($event)"
   />

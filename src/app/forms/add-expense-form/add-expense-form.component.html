@@ -1,9 +1,14 @@
-<form [formGroup]="form" class="grid grid-cols-4 gap-4">
-  <bj-textfield [id]="'dwadwa'" label="Date" formControlName="item"></bj-textfield>
-  <bj-textfield [id]="'dwadwa'" label="Category" formControlName="item"></bj-textfield>
-  <bj-textfield [id]="'dwadwa'" label="Item" formControlName="item"></bj-textfield>
-  <bj-textfield [id]="'dwadwa'" label="Amount" formControlName="item"></bj-textfield>
+<form [formGroup]="form" class="grid grid-cols-4 gap-4 rounded border border-neutral-600 p-4"
+      (ngSubmit)="handleSubmit()">
+  <bj-textfield [id]="'date'" type="datetime-local" label="Date" formControlName="date"></bj-textfield>
+  <bj-textfield [id]="'category'" label="Category" formControlName="category"></bj-textfield>
+  <bj-textfield [id]="'item'" label="Item" formControlName="item"></bj-textfield>
+  <bj-textfield [id]="'amount'" type="number" label="Amount" formControlName="amount"></bj-textfield>
+  <bj-button>Cancel</bj-button>
+  <bj-button [submit]="true">Submit</bj-button>
+
+  {{ form.get('item')?.value }}
+  <button (click)="bla()">awdawd</button>
+
 </form>
 
-{{ form.get('item')?.value }}
-<button (click)="bla()">awdawd</button>

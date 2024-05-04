@@ -22,6 +22,7 @@ import {FormLabelComponent} from "../form-label/form-label.component";
 export class TextfieldComponent implements ControlValueAccessor {
   @Input() public id: string = '';
   @Input() public label: string = '';
+  @Input() public type: 'text' | 'number' | 'datetime-local' = 'text';
   public value: string = '';
 
   public handleChange(event: Event) {

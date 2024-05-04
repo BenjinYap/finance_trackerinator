@@ -5,6 +5,7 @@ import {ExpenseModel} from "../../models/expense/expense.model";
 import {ButtonComponent} from "../../bjui/button/button.component";
 import {RouterLink} from "@angular/router";
 import {AddExpenseFormComponent} from "../../forms/add-expense-form/add-expense-form.component";
+import {RouteContainerComponent} from "../../components/route-container/route-container.component";
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ import {AddExpenseFormComponent} from "../../forms/add-expense-form/add-expense-
     DataTableComponent,
     ButtonComponent,
     RouterLink,
-    AddExpenseFormComponent
+    AddExpenseFormComponent,
+    RouteContainerComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
